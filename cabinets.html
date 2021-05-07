@@ -15,13 +15,16 @@
     <!---Fejléc --->
     <section class="header">
         <nav>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
+
                     <li><a href="index.html">BEMUTATKOZÁS</a></li>
                     <li><a href="projects.html">PROJEKTJEIM</a></li>
                     <li><a href="koncepcio.html">ÍGY KÉSZÜLT</a> </li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         <div class="textbox">
             <h1>Juhos Bálint</h1>
@@ -54,7 +57,15 @@
 
     </div>
       
-    
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
 
 
 

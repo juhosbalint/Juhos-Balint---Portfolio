@@ -9,17 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
     <section class="header">
         <nav>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
+
                     <li><a href="index.html">BEMUTATKOZÁS</a></li>
                     <li><a href="projects.html">PROJEKTJEIM</a></li>
                     <li><a href="koncepcio.html">ÍGY KÉSZÜLT</a> </li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         <div class="textbox">
             <h1>Juhos Bálint</h1>
@@ -42,5 +46,16 @@
         </p>
         <img src="images/bemutatkozas.jpg" alt="">
     </section>
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
 </body>
 </html>
